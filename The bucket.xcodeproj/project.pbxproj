@@ -99,10 +99,10 @@
 		D87FD324207CE0B70076CE62 /* The bucket */ = {
 			isa = PBXGroup;
 			children = (
+				D87FD329207CE0B70076CE62 /* Main.storyboard */,
 				D87FD325207CE0B70076CE62 /* AppDelegate.swift */,
 				D87FD327207CE0B70076CE62 /* Main.swift */,
 				D81EE3B320A9F15000573792 /* Record.swift */,
-				D87FD329207CE0B70076CE62 /* Main.storyboard */,
 				D87FD32C207CE0B70076CE62 /* Assets.xcassets */,
 				D87FD32E207CE0B70076CE62 /* LaunchScreen.storyboard */,
 				D87FD331207CE0B70076CE62 /* Info.plist */,

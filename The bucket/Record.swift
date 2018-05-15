@@ -13,10 +13,12 @@ class Record: UIViewController {
     @IBOutlet weak var RecordText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ RecordText.text = UserDefaults.standard.object(forKey: "0") as? String
     }
 
+    @IBAction func Save(_ sender: Any) {
+        UserDefaults.standard.set(RecordText.text, forKey: "0")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -67,6 +67,7 @@
                                     <color key="titleColor" red="0.87653452160000001" green="0.57882446050000003" blue="0.39603665469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="Save:" destination="XZ6-wo-BHd" eventType="touchUpInside" id="5P7-EF-ZkM"/>
                                     <segue destination="klN-Gg-VcL" kind="show" id="yBS-te-LJa"/>
                                 </connections>
                             </button>
@@ -91,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdV-2p-KHu">
-                                <rect key="frame" x="329" y="10" width="30" height="56"/>
+                                <rect key="frame" x="329" y="-17" width="30" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="38"/>
                                 <state key="normal" title="+">
@@ -112,6 +113,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="jP1-jY-DnB"/>
         <segue reference="yBS-te-LJa"/>
     </inferredMetricsTieBreakers>
 </document>
