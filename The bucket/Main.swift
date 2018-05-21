@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Main : UIViewController {
+class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,26 @@ class Main : UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+        //만들 리스트의 개수
+    }
+     
+    
+    func  tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let Cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        //withIdentifier: "cell"이 동일하게 identifier부분에서 cell이 들어가야한다
+        
+        return Cell
+    }
+    //셀 수식 부분
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //셀을  선택했을때 관련 명령어
+    print("abcd")
+    }
 }
+
 
