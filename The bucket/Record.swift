@@ -30,7 +30,10 @@ class Record: UIViewController {
         }
         
         else{
-            RecordText.text = MemoData[0]
+            
+            let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+           
+            RecordText.text = MemoData[MemoNumber]
             
         }
     }

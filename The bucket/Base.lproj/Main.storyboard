@@ -118,13 +118,16 @@
                                     <color key="titleColor" red="0.87653452157974243" green="0.57882446050643921" blue="0.39603665471076965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XZ6-wo-BHd" kind="show" id="jP1-jY-DnB"/>
+                                    <segue destination="XZ6-wo-BHd" kind="show" identifier="ToRecord" id="jP1-jY-DnB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ysj-HU-lGf"/>
                     </view>
+                    <connections>
+                        <segue destination="XZ6-wo-BHd" kind="show" id="VNg-eM-gie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjB-nE-wPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,5 +136,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5Gl-ms-PA0"/>
+        <segue reference="VNg-eM-gie"/>
     </inferredMetricsTieBreakers>
 </document>

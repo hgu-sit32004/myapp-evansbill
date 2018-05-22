@@ -10,6 +10,9 @@ import UIKit
 
 class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
 
+    
+    var MemoData = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,8 +24,8 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return 20
+       MemoData = UserDefaults.standard.object(forKey: "MemoData" ) as? [String] ?? [String]()
+        return MemoData.count
         //만들 리스트의 개수
     }
     
@@ -38,7 +41,13 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //셀을  선택했을때 관련 명령어
-  
+        let MemoNumber = indexPath.row
+        //리스트 메모의 인덱스를 부여하는 과정
+        
+        UserDefaults.standard.set(MemoNumber, forKey: "MemoNumber")
+        
+        self.performSegue(withIdentifier: "ToRecord" , sender: self)
+        //연결의 identifier가 ToRecord 로 명명된 것만 시행한다
     }
 }
 
