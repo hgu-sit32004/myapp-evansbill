@@ -99,7 +99,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="lnP-fe-P0T">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lnP-fe-P0T" id="lh7-be-zVZ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lnP-fe-P0T" id="lh7-be-zVZ" customClass="UITextView">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -118,6 +118,7 @@
                                     <color key="titleColor" red="0.87653452157974243" green="0.57882446050643921" blue="0.39603665471076965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="Add:" destination="klN-Gg-VcL" eventType="touchUpInside" id="qSp-X4-Eca"/>
                                     <segue destination="XZ6-wo-BHd" kind="show" identifier="ToRecord" id="jP1-jY-DnB"/>
                                 </connections>
                             </button>
@@ -135,7 +136,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5Gl-ms-PA0"/>
-        <segue reference="VNg-eM-gie"/>
+        <segue reference="yBS-te-LJa"/>
+        <segue reference="jP1-jY-DnB"/>
     </inferredMetricsTieBreakers>
 </document>

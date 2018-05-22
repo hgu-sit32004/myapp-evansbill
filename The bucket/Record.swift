@@ -10,10 +10,11 @@ import UIKit
 
 class Record: UIViewController {
 
+    //MARK: -variable
     @IBOutlet weak var RecordText: UITextView!
     
     var MemoData = [String]() //메모가 저장되는 집합을 만든다
-    
+    //variable-end
     
     
     
@@ -22,27 +23,45 @@ class Record: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
-        //값이 있다면 집합형태로 값을 불러오고 없다면 빈 값으로 불러온다
+        let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
         
-        if MemoData.count == 0 {
-            RecordText.text = " ..."
-        }
-        
-        else{
+        if MemoNumber == -1{
+            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
+
+             RecordText.text = " "
             
-            let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
-           
+        }
+        else {
+        
+        MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
+            
             RecordText.text = MemoData[MemoNumber]
             
         }
+        //값이 있다면 집합형태로 값을 불러오고 없다면 빈 값으로 불러온다
+        
+      
     }
 
+    //MARK: - Action
     @IBAction func Save(_ sender: Any) {
        
+        let  MemoNuber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        if MemoNuber == -1{
+            
+            MemoData.insert(RecordText.text, at: 0)
+            UserDefaults.standard.set(MemoData , forKey: "MemoData")
+        }
+            
+            
+        else
+        {
+         MemoData.remove(at: MemoNuber)
+            MemoData.insert(RecordText.text, at: MemoNuber)
+            UserDefaults.standard.set(MemoData , forKey: "MemoData")
+            
+        }
         
-        MemoData.insert(RecordText.text, at: 0)
-        UserDefaults.standard.set(MemoData , forKey: "MemoData")
         
         //가장 나중에 기록된 값이 맨 상단으로 오기 위하여 at 0로 한다
     }

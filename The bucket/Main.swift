@@ -49,6 +49,13 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
         self.performSegue(withIdentifier: "ToRecord" , sender: self)
         //연결의 identifier가 ToRecord 로 명명된 것만 시행한다
     }
+
+    @IBAction func Add(_ sender: Any) {
+    
+        UserDefaults.standard.set(-1, forKey: "MemoNuber")
+    
+    }
+    
 }
 
 
