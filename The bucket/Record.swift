@@ -66,6 +66,15 @@ class Record: UIViewController {
         //가장 나중에 기록된 값이 맨 상단으로 오기 위하여 at 0로 한다
     }
     
+    @IBAction func Delete(_ sender: Any) {
+        
+        let  MemoNuber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        
+        if MemoNuber != -1{
+            MemoData.remove(at: MemoNuber)
+            UserDefaults.standard.set(MemoData, forKey: "MemoData")
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

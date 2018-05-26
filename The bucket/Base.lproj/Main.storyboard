@@ -75,6 +75,10 @@
                                 <rect key="frame" x="16" y="6" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="Delete:" destination="XZ6-wo-BHd" eventType="touchUpInside" id="aAm-M1-96M"/>
+                                    <segue destination="klN-Gg-VcL" kind="show" id="roZ-UZ-SPh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
