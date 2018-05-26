@@ -34,9 +34,10 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
     let Cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainCell
         //maincell 을 연결하기
         
-        Cell.TitleCell.text = "1"
-        
        
+        
+        MemoData = UserDefaults.standard.object(forKey: "MemoData" ) as? [String] ?? [String]()
+         Cell.TitleCell.text = MemoData[indexPath.row]
         
         //withIdentifier: "cell"이 동일하게 identifier부분에서 cell이 들어가야한다
         
