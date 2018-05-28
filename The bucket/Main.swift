@@ -14,7 +14,13 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
     var MemoData = [String]()
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        leftSwipe.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(leftSwipe)
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
 

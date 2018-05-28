@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D81EE3B420A9F15000573792 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81EE3B320A9F15000573792 /* Record.swift */; };
 		D81EE3B620AB556300573792 /* First.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81EE3B520AB556300573792 /* First.swift */; };
+		D86605D920BC5D6500916EFB /* Achieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86605D820BC5D6500916EFB /* Achieve.swift */; };
 		D878FC2A20B7F4F700121B88 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D878FC2920B7F4F700121B88 /* MainCell.swift */; };
 		D87FD326207CE0B70076CE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FD325207CE0B70076CE62 /* AppDelegate.swift */; };
 		D87FD328207CE0B70076CE62 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87FD327207CE0B70076CE62 /* Main.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		D81EE3B320A9F15000573792 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		D81EE3B520AB556300573792 /* First.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First.swift; sourceTree = "<group>"; };
+		D86605D820BC5D6500916EFB /* Achieve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achieve.swift; sourceTree = "<group>"; };
 		D878FC2920B7F4F700121B88 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		D87FD322207CE0B70076CE62 /* The bucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The bucket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87FD325207CE0B70076CE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				D87FD327207CE0B70076CE62 /* Main.swift */,
 				D878FC2920B7F4F700121B88 /* MainCell.swift */,
 				D81EE3B520AB556300573792 /* First.swift */,
+				D86605D820BC5D6500916EFB /* Achieve.swift */,
 				D81EE3B320A9F15000573792 /* Record.swift */,
 				D87FD32C207CE0B70076CE62 /* Assets.xcassets */,
 				D87FD32E207CE0B70076CE62 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81EE3B420A9F15000573792 /* Record.swift in Sources */,
+				D86605D920BC5D6500916EFB /* Achieve.swift in Sources */,
 				D87FD328207CE0B70076CE62 /* Main.swift in Sources */,
 				D81EE3B620AB556300573792 /* First.swift in Sources */,
 				D87FD326207CE0B70076CE62 /* AppDelegate.swift in Sources */,
