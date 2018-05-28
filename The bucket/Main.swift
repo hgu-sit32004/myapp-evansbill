@@ -32,6 +32,7 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     func  tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let Cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainCell
+        
         //maincell 을 연결하기
         
        
@@ -44,6 +45,7 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
         return Cell
     }
     //셀 수식 부분
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //셀을  선택했을때 관련 명령어
@@ -58,7 +60,8 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func Add(_ sender: Any) {
     
-        UserDefaults.standard.set(-1, forKey: "MemoNuber")
+        UserDefaults.standard.set(-1, forKey: "MemoNumber")
+        
     
     }
     

@@ -9,7 +9,8 @@
 import UIKit
 
 class Record: UIViewController {
-
+    
+    
     //MARK: -variable
     @IBOutlet weak var RecordText: UITextView!
     
@@ -22,10 +23,12 @@ class Record: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+   
         let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
         
-        if MemoNumber == -1{
+        if MemoNumber == -1
+        {
             MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
 
              RecordText.text = " "
@@ -46,8 +49,12 @@ class Record: UIViewController {
     //MARK: - Action
     @IBAction func Save(_ sender: Any) {
        
-        let  MemoNuber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
-        if MemoNuber == -1{
+        let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        print(MemoNumber)
+        
+        if MemoNumber == -1
+        
+        {
             
             MemoData.insert(RecordText.text, at: 0)
             UserDefaults.standard.set(MemoData , forKey: "MemoData")
@@ -56,10 +63,9 @@ class Record: UIViewController {
             
         else
         {
-         MemoData.remove(at: MemoNuber)
-            MemoData.insert(RecordText.text, at: MemoNuber)
+            MemoData.remove(at: MemoNumber)
+            MemoData.insert(RecordText.text, at: MemoNumber)
             UserDefaults.standard.set(MemoData , forKey: "MemoData")
-            
         }
         
         
@@ -68,11 +74,11 @@ class Record: UIViewController {
     
     @IBAction func Delete(_ sender: Any) {
         
-        let  MemoNuber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
         
-        if MemoNuber != -1{
-            MemoData.remove(at: MemoNuber)
-            UserDefaults.standard.set(MemoData, forKey: "MemoData")
+        if MemoNumber != -1{
+            MemoData.remove(at: MemoNumber)
+          UserDefaults.standard.set(MemoData , forKey: "MemoData")
         }
     }
     
