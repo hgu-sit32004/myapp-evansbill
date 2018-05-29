@@ -15,7 +15,7 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         
-        
+        //스와이프 해서 넘어가는 부분
         super.viewDidLoad()
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         leftSwipe.direction = UISwipeGestureRecognizerDirection.left
@@ -41,7 +41,6 @@ class Main : UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         //maincell 을 연결하기
         
-       
         
         MemoData = UserDefaults.standard.object(forKey: "MemoData" ) as? [String] ?? [String]()
          Cell.TitleCell.text = MemoData[indexPath.row]

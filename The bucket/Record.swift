@@ -31,7 +31,7 @@ class Record: UIViewController {
         {
             MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
 
-             RecordText.text = " "
+             RecordText.text = ""
             
         }
         else {
@@ -50,26 +50,40 @@ class Record: UIViewController {
     @IBAction func Save(_ sender: Any) {
        
         let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        
         print(MemoNumber)
-        
-        if MemoNumber == -1
-        
-        {
+        if RecordText.text == ""{
             
-            MemoData.insert(RecordText.text, at: 0)
-            UserDefaults.standard.set(MemoData , forKey: "MemoData")
         }
-            
-            
         else
-        {
-            MemoData.remove(at: MemoNumber)
-            MemoData.insert(RecordText.text, at: MemoNumber)
-            UserDefaults.standard.set(MemoData , forKey: "MemoData")
-        }
+            {
+            if MemoNumber == -1
+            
+            {
+                
+                MemoData.insert(RecordText.text, at: 0)
+                UserDefaults.standard.set(MemoData , forKey: "MemoData")
+            }
+                
+                
+            else
+            {
+                MemoData.remove(at: MemoNumber)
+                MemoData.insert(RecordText.text, at: MemoNumber)
+                UserDefaults.standard.set(MemoData , forKey: "MemoData")
+            }
         
         
         //가장 나중에 기록된 값이 맨 상단으로 오기 위하여 at 0로 한다
+    }
+        
+    }
+    
+    
+    @IBAction func Success(_ sender: Any) {
+        //버튼을 누르면, 저장되어 있는 값을 다른 레이어로 옮긴다.
+        
+        
     }
     
     @IBAction func Delete(_ sender: Any) {
@@ -81,6 +95,10 @@ class Record: UIViewController {
           UserDefaults.standard.set(MemoData , forKey: "MemoData")
         }
     }
+    
+ 
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
