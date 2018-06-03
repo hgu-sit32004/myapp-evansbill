@@ -40,7 +40,25 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         CollectionCell .CollectionImage.image? = Memoimage[indexPath.row]!
         return CollectionCell }
     
-  
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //셀을  선택했을때 관련 명령어
+        let MemoNumber = indexPath.row
+        //리스트 메모의 인덱스를 부여하는 과정
+        
+        UserDefaults.standard.set(MemoNumber, forKey: "MemoNumber")
+        
+        self.performSegue(withIdentifier: "ToRecord" , sender: self)
+        //연결의 identifier가 ToRecord 로 명명된 것만 시행한다
+    }
+    
+    
+    @IBAction func Add(_ sender: Any) {
+        
+        UserDefaults.standard.set(-1, forKey: "MemoNumber")
+        
+    }
+    
+    
     //만들 뷰의 개수
    
     /*
