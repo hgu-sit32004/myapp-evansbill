@@ -14,7 +14,7 @@ import UIKit
 class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
    
     
-    //var MemoData = [String]()
+    var MemoData = [String]()
     var Locationname = ["1","2","3"]
     var Memoimage = [UIImage(named: "1"),UIImage(named: "2"),UIImage(named: "3")]
 
@@ -22,9 +22,9 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       // MemoData = UserDefaults.standard.object(forKey: "MemoData" ) as? [String] ?? [String]()
-        //return MemoData.count
-        return Locationname.count
+       MemoData = UserDefaults.standard.object(forKey: "MemoData" ) as? [String] ?? [String]()
+        return MemoData.count
+        //return Locationname.count
     }
     
     
@@ -32,11 +32,11 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         let CollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath ) as! MaincollectionCell
         
         
-      //  MemoData = UserDefaults.standard.object(forKey: "MemoData" ) as? [String] ?? [String]()
-        CollectionCell .CollectionTitle.text = Locationname[indexPath.row]
-        CollectionCell .CollectionDescription.text = Locationname[indexPath.row]
-        //Cell.CollectionTitle.text = MemoData[indexPath.row]
-        //Cell.CollectionDescription.text = MemoData[indexPath.row]
+       MemoData = UserDefaults.standard.object(forKey: "MemoData" ) as? [String] ?? [String]()
+        //CollectionCell .CollectionTitle.text = Locationname[indexPath.row]
+        //CollectionCell .CollectionDescription.text = Locationname[indexPath.row]
+        CollectionCell.CollectionTitle.text = MemoData[indexPath.row]
+        CollectionCell.CollectionDescription.text = MemoData[indexPath.row]
         CollectionCell .CollectionImage.image? = Memoimage[indexPath.row]!
         return CollectionCell }
     
