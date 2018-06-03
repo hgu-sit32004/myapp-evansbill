@@ -44,8 +44,7 @@ extension UIViewController
             performSegue(withIdentifier: "goLeft", sender: self)
         case 2:
             performSegue(withIdentifier: "goRight", sender: self)
-        case 3:
-            performSegue(withIdentifier: "SwipeToBucket" , sender: self)
+       
         default:
             break
         }
