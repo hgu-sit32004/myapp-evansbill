@@ -39,7 +39,7 @@ class Record: UIViewController {
         MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
             
             RecordText.text = MemoData[MemoNumber]
-            
+            print(MemoNumber)
         }
         //값이 있다면 집합형태로 값을 불러오고 없다면 빈 값으로 불러온다
         
