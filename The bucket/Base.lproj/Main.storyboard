@@ -150,7 +150,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="customSize" width="353" height="256"/>
                                         <connections>
                                             <outlet property="CollectionDescription" destination="vMk-yR-gEC" id="ida-mW-5i3"/>
@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ynk-eC-K8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2361" y="-801"/>
+            <point key="canvasLocation" x="2361" y="-757"/>
         </scene>
         <!--Main-->
         <scene sceneID="dqI-qS-wdJ">
@@ -308,14 +308,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Gm-Dk-Wi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="865"/>
+            <point key="canvasLocation" x="1212" y="999"/>
         </scene>
     </scenes>
     <resources>
         <image name="1" width="1920" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Gl-ms-PA0"/>
+        <segue reference="4ep-b8-zgr"/>
         <segue reference="rGB-QF-YWv"/>
         <segue reference="QXr-04-9qX"/>
     </inferredMetricsTieBreakers>
