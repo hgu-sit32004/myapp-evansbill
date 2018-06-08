@@ -17,7 +17,6 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
     var MemoData = [String]()
     var Locationname = ["1","2","3"]
     var Memoimage = [UIImage(named: "1"),UIImage(named: "2"),UIImage(named: "3")]
-
     
     
     
@@ -87,8 +86,15 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
     
 */
     override func viewDidLoad() {
+        
+        //스와이프 해서 넘어가는 부분
         super.viewDidLoad()
-
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        leftSwipe.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(leftSwipe)
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        
         // Do any additional setup after loading the view.
     }
 

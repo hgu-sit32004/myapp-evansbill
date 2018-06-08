@@ -29,8 +29,8 @@ class Record: UIViewController {
         
         if MemoNumber == -1
         {
-            MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
-
+            MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
+ 
              RecordText.text = ""
             
         }
