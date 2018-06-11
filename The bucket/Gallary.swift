@@ -13,6 +13,7 @@ import UIKit
 
 class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
    
+  
     
     var MemoData = [String]()
     var Locationname = ["1","2","3"]
@@ -96,6 +97,7 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         // Do any additional setup after loading the view, typically from a nib.
         
         // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
