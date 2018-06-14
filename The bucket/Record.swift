@@ -8,9 +8,11 @@
 //
 
 import UIKit
+import CoreData
 
 class Record: UIViewController {
     
+    var bucket = [Bucket]()
     
     //MARK: -variable
     @IBOutlet weak var RecordText: UITextView!
@@ -20,22 +22,36 @@ class Record: UIViewController {
     var MemoData = [String]() //메모가 저장되는 집합을 만든다
     var MemoDescripData = [String]()
     var MemoTime = [String]()
+    var managedObjextContext:NSManagedObjectContext!
+    
+    
+    
     //variable-end
     
+    
+    let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         
-        let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        managedObjextContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+       
+        // Do any additional setup after loading the view, typically from a nib.
         
+        // Do any additional setup after loading the view.
+        
+    }
+    
+   
+        
+    
+     
+       /*
         if MemoNumber == -1
         {
-            MemoData = UserDefaults.standard.object(forKey: "MemoData") as? [String] ?? [String]()
-            
             RecordText.text = ""
-            
         }
         else {
             
@@ -45,16 +61,20 @@ class Record: UIViewController {
             print(MemoNumber)
         }
         //값이 있다면 집합형태로 값을 불러오고 없다면 빈 값으로 불러온다
+        */
         
-        
-    }
+    
     
     //MARK: - Action
     @IBAction func Save(_ sender: Any) {
+         let bucketItem = Bucket(context: managedObjextContext)
+        
+        let date = NSDate() //현재 시간을 가져옴
+        let formatter = DateFormatter() //DateFormatter라는 클래스의 상수 선언
+        formatter.dateFormat = "yyyy-MM-dd" //상수 formatter의 dateFormat 속성 설정\
         
         let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
-        
-        print(MemoNumber)
+      
         if RecordText.text == ""
         {
             
@@ -62,17 +82,17 @@ class Record: UIViewController {
         else
         {
             if MemoNumber == -1
-                
-                
             {
-                print("새로운 메모를 작성하겠습니다")
+            
                 MemoData.insert(RecordText.text, at: 0)
-                //MemoDescripData.insert(RecordDescription.text,at:0)
-                //MemoTime.insert(formatter.string(from: date as Date), at:0)
-                UserDefaults.standard.set(MemoData, forKey: "MemoData")
-                //UserDefaults.standard.set(MemoDescripData, forKey: "MemoDescription")
+                MemoTime.insert(formatter.string(from: date as Date), at:0)
+                MemoDescripData.insert(RecordDescription.text, at:0)
+                bucketItem.memoTitle = RecordText.text
+                bucketItem.memoDescription = RecordDescription.text
+                bucketItem.memoDate = formatter.string(from: date as Date)
+                //UserDefaults.standard.set(MemoData, forKey: "MemoData")
                 //UserDefaults.standard.set(MemoTime, forKey: "MemoTime")
-                // 현재 날짜를 설정한 포맷대로 lblCurrentTime.text 입력
+                //UserDefaults.standard.set(MemoDescripData, forKey: "MemoDescription")
             }
                 
                 
@@ -82,8 +102,8 @@ class Record: UIViewController {
                 MemoDescripData.remove(at: MemoNumber)
                 MemoData.insert(RecordText.text, at: MemoNumber)
                 MemoDescripData.insert(RecordDescription.text,at:MemoNumber)
-                UserDefaults.standard.set(MemoData , forKey: "MemoData")
-                UserDefaults.standard.set(MemoDescripData , forKey: "MemoDescription")
+                //UserDefaults.standard.set(MemoData , forKey: "MemoData")
+                //UserDefaults.standard.set(MemoDescripData , forKey: "MemoDescription")
             }
             
             //가장 나중에 기록된 값이 맨 상단으로 오기 위하여 at 0로 한다

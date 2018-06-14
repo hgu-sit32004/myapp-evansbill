@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D81EE3B420A9F15000573792 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81EE3B320A9F15000573792 /* Record.swift */; };
 		D81EE3B620AB556300573792 /* First.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81EE3B520AB556300573792 /* First.swift */; };
+		D81EF89120D2DED300AD8C6C /* BucketModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D81EF88F20D2DED300AD8C6C /* BucketModel.xcdatamodeld */; };
 		D86605D920BC5D6500916EFB /* Achieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86605D820BC5D6500916EFB /* Achieve.swift */; };
 		D86605DB20C1026D00916EFB /* Gallary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86605DA20C1026D00916EFB /* Gallary.swift */; };
 		D86605DD20C1041B00916EFB /* MaincollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86605DC20C1041B00916EFB /* MaincollectionCell.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		D81EE3B320A9F15000573792 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		D81EE3B520AB556300573792 /* First.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First.swift; sourceTree = "<group>"; };
+		D81EF89020D2DED300AD8C6C /* PresentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PresentModel.xcdatamodel; sourceTree = "<group>"; };
 		D86605D820BC5D6500916EFB /* Achieve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achieve.swift; sourceTree = "<group>"; };
 		D86605DA20C1026D00916EFB /* Gallary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallary.swift; sourceTree = "<group>"; };
 		D86605DC20C1041B00916EFB /* MaincollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaincollectionCell.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				D86605D820BC5D6500916EFB /* Achieve.swift */,
 				D81EE3B320A9F15000573792 /* Record.swift */,
 				D86605DA20C1026D00916EFB /* Gallary.swift */,
+				D81EF88F20D2DED300AD8C6C /* BucketModel.xcdatamodeld */,
 				D86605DC20C1041B00916EFB /* MaincollectionCell.swift */,
 				D87FD32C207CE0B70076CE62 /* Assets.xcassets */,
 				D87FD32E207CE0B70076CE62 /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				D86605DB20C1026D00916EFB /* Gallary.swift in Sources */,
 				D87FD326207CE0B70076CE62 /* AppDelegate.swift in Sources */,
 				D878FC2A20B7F4F700121B88 /* MainCell.swift in Sources */,
+				D81EF89120D2DED300AD8C6C /* BucketModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +586,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D81EF88F20D2DED300AD8C6C /* BucketModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D81EF89020D2DED300AD8C6C /* PresentModel.xcdatamodel */,
+			);
+			currentVersion = D81EF89020D2DED300AD8C6C /* PresentModel.xcdatamodel */;
+			name = BucketModel.xcdatamodeld;
+			path = "../../../Downloads/PresentApp-master 2/PresentBase/BucketModel.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D87FD31A207CE0B70076CE62 /* Project object */;
 }
