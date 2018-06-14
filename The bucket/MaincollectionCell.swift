@@ -16,4 +16,7 @@ class MaincollectionCell: UICollectionViewCell {
     @IBOutlet weak var CollectionTitle: UILabel!
     
     @IBOutlet weak var CollectionDescription: UILabel!
+    
+    @IBOutlet weak var CollectionDate: UILabel!
+    
 }

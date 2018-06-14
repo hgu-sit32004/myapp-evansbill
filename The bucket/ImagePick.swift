@@ -10,15 +10,56 @@ import UIKit
 
 class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
+    let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+    var ImageData = [UIImage]()
+    
+    let defaultimage = [UIImage(named: "1")]
+    
+    @IBAction func imageSave(_ sender: Any) {
+        
+        
+
+        
+        let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+  
+        
+       
+            if MemoNumber == -1
+                
+            {
+                
+                ImageData.insert(imageview.image!, at: 0)
+                 UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: ImageData), forKey: "ImageData")
+            }
+                
+                
+            else
+            {
+                ImageData.remove(at: MemoNumber)
+                ImageData.insert(imageview.image!, at: MemoNumber)
+                UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: ImageData), forKey: "ImageData")
+            }
+            
+        
+                
+                //가장 나중에 기록된 값이 맨 상단으로 오기 위하여 at 0로 한다
+        
+            
+        
+    }
     @IBOutlet weak var imageview: UIImageView!
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    //사진 불러오는 과저
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
    
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageview.image = image
+        
+        //UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: ImageData), forKey: "ImageNumber")
         
         dismiss(animated: true, completion: nil)
         
@@ -52,7 +93,7 @@ class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
                 self.present(actionSheet, animated: true, completion: nil) } }
         else { self.present(actionSheet, animated: true, completion: nil) }
             */
-            //출처: http://devsc.tistory.com/76 [You Know Programing?]
+            
         /*
         if UIDevice.current.userInterfaceIdiom == .pad { //디바이스 타입이 iPad일때
             if let popoverController = actionSheet.popoverPresentationController { // ActionSheet가 표현되는 위치를 저장해줍니다.
@@ -69,8 +110,25 @@ class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
+        
+        if MemoNumber == -1
+        {
+             imageview.image = defaultimage[0]
+            
+        }
+        else {
+            
+            ImageData = UserDefaults.standard.object(forKey: "ImageData") as?  [UIImage] ?? [UIImage]()
+            imageview.image = ImageData[MemoNumber]
+            print(MemoNumber)
+        }
+        //값이 있다면 집합형태로 값을 불러오고 없다면 빈 값으로 불러온다
+        
+        
     }
+        // Do any additional setup after loading the view.
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

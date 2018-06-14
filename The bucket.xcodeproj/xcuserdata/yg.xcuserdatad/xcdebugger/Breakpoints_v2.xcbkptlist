@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The bucket/Record.swift"
-            timestampString = "550438835.067433"
+            timestampString = "550656943.3231519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The bucket/Main.swift"
-            timestampString = "550126166.063419"
+            timestampString = "550652606.007031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The bucket/Record.swift"
-            timestampString = "550438835.067616"
+            timestampString = "550656943.323974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The bucket/Record.swift"
-            timestampString = "550438835.067708"
+            timestampString = "550656943.3245699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "Save(_:)"
-            landmarkType = "7">
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,13 +74,123 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The bucket/Record.swift"
-            timestampString = "550438835.0677969"
+            timestampString = "550656943.325276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "Record"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The bucket/ImagePick.swift"
+            timestampString = "550656943.325943"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The bucket/ImagePick.swift"
+            timestampString = "550656943.326018"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ImagePick"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_bucket.ImagePick.ImageData.getter : Swift.Array&lt;__ObjC.UIImage&gt;"
+                  moduleName = "The bucket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yg/Desktop/myapp-evansbill/The%20bucket/ImagePick.swift"
+                  timestampString = "550567551.998399"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_bucket.ImagePick.ImageData.setter : Swift.Array&lt;__ObjC.UIImage&gt;"
+                  moduleName = "The bucket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yg/Desktop/myapp-evansbill/The%20bucket/ImagePick.swift"
+                  timestampString = "550567552.000352"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_bucket.ImagePick.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; The_bucket.ImagePick"
+                  moduleName = "The bucket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yg/Desktop/myapp-evansbill/The%20bucket/ImagePick.swift"
+                  timestampString = "550567552.0021729"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "778">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_bucket.ImagePick.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;The_bucket.ImagePick&gt;"
+                  moduleName = "The bucket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yg/Desktop/myapp-evansbill/The%20bucket/ImagePick.swift"
+                  timestampString = "550567552.004437"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "711">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "The bucket/Gallary.swift"
+            timestampString = "550656943.326095"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
