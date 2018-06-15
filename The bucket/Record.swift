@@ -30,7 +30,7 @@ class Record: UIViewController {
     
     
     let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
-    
+    let bucketItem = Bucket()
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -42,26 +42,26 @@ class Record: UIViewController {
         
         // Do any additional setup after loading the view.
         
-    }
+    
     
    
         
-    
+       let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
      
-       /*
+    
         if MemoNumber == -1
         {
-            RecordText.text = ""
+            RecordText.text = "Bucket Title"
         }
         else {
             
             MemoData = UserDefaults.standard.object(forKey: "MemoData") as! [String]
             
-            RecordText.text = MemoData[MemoNumber]
+            //RecordText.text = bucketItem(MemoNumber]
             print(MemoNumber)
         }
         //값이 있다면 집합형태로 값을 불러오고 없다면 빈 값으로 불러온다
-        */
+    }
         
     
     
@@ -120,9 +120,13 @@ class Record: UIViewController {
     
     @IBAction func Delete(_ sender: Any) {
         
+        
+        
+        
         let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
         
         if MemoNumber != -1{
+            
             MemoData.remove(at: MemoNumber)
             UserDefaults.standard.set(MemoData , forKey: "MemoData")
         }

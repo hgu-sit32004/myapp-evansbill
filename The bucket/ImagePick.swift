@@ -7,7 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
+
+var managedObjextContext:NSManagedObjectContext!
+
+var bucket = [Bucket]()
+let bucketItem = Bucket(context: managedObjextContext)
 class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
@@ -18,7 +24,7 @@ class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
     @IBAction func imageSave(_ sender: Any) {
         
         
-
+/*
         
         let  MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
   
@@ -35,12 +41,12 @@ class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
                 
             else
             {
-                ImageData.remove(at: MemoNumber)
-                ImageData.insert(imageview.image!, at: MemoNumber)
+               // ImageData.remove(at: MemoNumber)
+                //ImageData.insert(imageview.image!, at: MemoNumber)
                 UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: ImageData), forKey: "ImageData")
             }
             
-        
+        */
                 
                 //가장 나중에 기록된 값이 맨 상단으로 오기 위하여 at 0로 한다
         
@@ -53,12 +59,14 @@ class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
         dismiss(animated: true, completion: nil)
     }
     
-    //사진 불러오는 과저
+    //사진 불러오는 과정
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-   
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        imageview.image = image
         
+        managedObjextContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageview.image = image
+        bucketItem.memoImage = NSData(data: UIImageJPEGRepresentation(image!, 0.3)!) as Data
         //UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: ImageData), forKey: "ImageNumber")
         
         dismiss(animated: true, completion: nil)
@@ -109,7 +117,7 @@ class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
         
         if MemoNumber == -1
@@ -120,8 +128,9 @@ class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationCo
         else {
             
             ImageData = UserDefaults.standard.object(forKey: "ImageData") as?  [UIImage] ?? [UIImage]()
-            imageview.image = ImageData[MemoNumber]
-            print(MemoNumber)
+           
+            //imageview.image = ImageData[MemoNumber]
+            
         }
         //값이 있다면 집합형태로 값을 불러오고 없다면 빈 값으로 불러온다
         

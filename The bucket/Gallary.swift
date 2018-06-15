@@ -11,7 +11,7 @@ import CoreData
 
 
 
-class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
+class Gallary: UIViewController,UIImagePickerControllerDelegate,UICollectionViewDataSource, UICollectionViewDelegate {
    
     var bucket = [Bucket]()
    var managedObjextContext:NSManagedObjectContext!
@@ -34,8 +34,16 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         
         managedObjextContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        
+        
         loadData()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+    
+        navigationController?.navigationBar.tintColor = UIColor.black
     }
     
     func loadData(){
@@ -51,6 +59,8 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         
         
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
@@ -85,6 +95,12 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         CollectionCell.CollectionTitle.text = bucketItem.memoTitle
         CollectionCell.CollectionDescription.text = bucketItem.memoDescription
         CollectionCell.CollectionDate.text = bucketItem.memoDate
+        if bucketItem.memoImage == nil{
+            CollectionCell.AchieveImage.image = UIImage()
+        }
+        else{
+            CollectionCell.AchieveImage.image = UIImage(data: (bucketItem.memoImage!))
+        }
         //CollectionCell.CollectionDate.text = MemoTime[indexPath.row]
         //CollectionCell.CollectionDescription.text = MemoDescripData[indexPath.row]
         //CollectionCell.CollectionImage.image? = defauldimage[0]!
@@ -106,9 +122,8 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         //셀을  선택했을때 관련 명령어
         
         
-        
-        
-        
+      
+      
         
         
         
@@ -118,10 +133,11 @@ class Gallary: UIViewController,UICollectionViewDataSource, UICollectionViewDele
         UserDefaults.standard.set(MemoNumber, forKey: "MemoNumber")
         
         print(indexPath.row)
-        self.performSegue(withIdentifier: "ToRecord" , sender: self)
+        //self.performSegue(withIdentifier: "ToRecord" , sender: self)
         //연결의 identifier가 ToRecord 로 명명된 것만 시행한다
     }
     
+   
     
     @IBAction func Add(_ sender: Any) {
         

@@ -11,7 +11,9 @@ import UIKit
 class MaincollectionCell: UICollectionViewCell {
     
  
-    @IBOutlet weak var AchieveImage: UIVisualEffectView!
+   
+    @IBOutlet weak var AchieveImage: UIImageView!
+    
     
     @IBOutlet weak var CollectionImage: UIImageView!
     
