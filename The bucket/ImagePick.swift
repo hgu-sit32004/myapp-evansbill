@@ -15,13 +15,24 @@ var managedObjextContext:NSManagedObjectContext!
 var bucket = [Bucket]()
 let bucketItem = Bucket(context: managedObjextContext)
 class ImagePick: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-
+    @IBOutlet weak var BucketTitle: UITextView!
+    
+    @IBOutlet weak var BucketDescript: UITextView!
     let MemoNumber = UserDefaults.standard.object(forKey: "MemoNumber") as! Int
     var ImageData = [UIImage]()
     
     let defaultimage = [UIImage(named: "1")]
     
     @IBAction func imageSave(_ sender: Any) {
+        
+        let date = NSDate() //현재 시간을 가져옴
+        let formatter = DateFormatter() //DateFormatter라는 클래스의 상수 선언
+        formatter.dateFormat = "yyyy-MM-dd" //상수 formatter의 dateFormat 속성 설정
+        
+        
+        bucketItem.memoTitle = BucketTitle.text
+        bucketItem.memoDescription = BucketDescript.text
+        bucketItem.memoDate = formatter.string(from: date as Date)
         
         
 /*

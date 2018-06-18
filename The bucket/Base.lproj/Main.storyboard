@@ -92,7 +92,7 @@
                                 <rect key="frame" x="76" y="877" width="42" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                <state key="normal" image="trash">
+                                <state key="normal">
                                     <color key="titleColor" red="0.87653452160000001" green="0.57882446050000003" blue="0.39603665469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -125,7 +125,7 @@
                                 <rect key="frame" x="228" y="576" width="322" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DP7-4o-SJv">
@@ -139,16 +139,20 @@
                                     <segue destination="M69-C1-YxV" kind="show" id="ZBj-a1-Ug8"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-Bp-pZa">
-                                <rect key="frame" x="20" y="79" width="728" height="489"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="bucketitle" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oYA-Uy-zBe">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" text="Bucketitle" translatesAutoresizingMaskIntoConstraints="NO" id="oYA-Uy-zBe">
                                 <rect key="frame" x="59" y="674" width="661" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82704573869999998" green="0.85626667739999995" blue="0.75292724369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.82704573869999998" green="0.85626667739999995" blue="0.75292724369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="sRm-cT-F4Y">
+                                <rect key="frame" x="59" y="798" width="661" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.82704573869999998" green="0.85626667739999995" blue="0.75292724369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY8-Td-HYB">
@@ -159,19 +163,17 @@
                                     <action selector="chooseimage:" destination="r2z-dw-Kwm" eventType="touchUpInside" id="A0V-5f-aCP"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sRm-cT-F4Y">
-                                <rect key="frame" x="59" y="798" width="661" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82704573869999998" green="0.85626667739999995" blue="0.75292724369999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-Bp-pZa">
+                                <rect key="frame" x="45" y="91" width="678" height="446"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.18466091160000001" green="0.19143137339999999" blue="0.2352996171" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="7ua-Fk-Hov"/>
                     </view>
                     <connections>
+                        <outlet property="BucketDescript" destination="sRm-cT-F4Y" id="LAM-Gx-Y90"/>
+                        <outlet property="BucketTitle" destination="oYA-Uy-zBe" id="bQz-Rb-gcV"/>
                         <outlet property="imageview" destination="5AD-Bp-pZa" id="Ht1-6v-4AW"/>
                     </connections>
                 </viewController>
@@ -231,14 +233,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-lz-zQu">
-                                                    <rect key="frame" x="6" y="10" width="213" height="162"/>
+                                                    <rect key="frame" x="6" y="9" width="213" height="163"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="u57-JQ-GPs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="213" height="162"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="213" height="163"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVZ-u4-ChK">
-                                                                <rect key="frame" x="0.0" y="0.0" width="213" height="162"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="213" height="167"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             </imageView>
                                                         </subviews>
@@ -440,9 +442,9 @@
         <image name="1" width="1920" height="1080"/>
         <image name="add" width="200" height="200"/>
         <image name="checked" width="338" height="354"/>
-        <image name="trash" width="288" height="399"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="C8q-t1-ILQ"/>
         <segue reference="ZBj-a1-Ug8"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.18466091160000001" green="0.19143137339999999" blue="0.2352996171" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
